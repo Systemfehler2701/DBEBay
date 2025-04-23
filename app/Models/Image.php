@@ -2,28 +2,25 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Image extends Model
 {
+    use HasFactory;
     protected $fillable = [
-        'url',
-        'description',
+        'image_path',
         'position',
-        'created',
-        'updated',
+        'listing_id',
     ];
-    public function entry(): BelongsTo
+    public function listing(): BelongsTo
     {
-        return $this->belongsTo(related: Entry::class);
+        return $this->belongsTo(related: Listing::class);
     }
 
     protected $casts = [
-        'url' => 'string',
-        'description' => 'string',
-        'position' => 'int',
-        'created' => 'datetime',
-        'updated' => 'datetime',
+        'image_path' => 'string',
+        'position' => 'integer',
     ];
 }

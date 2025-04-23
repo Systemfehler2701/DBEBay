@@ -45,9 +45,9 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function entries(): HasMany
+    public function listings(): HasMany
     {
-        return $this->hasMany(related: Entry::class);
+        return $this->hasMany(related: Listing::class);
     }
 
     /**
