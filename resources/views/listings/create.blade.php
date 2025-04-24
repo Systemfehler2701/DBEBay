@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'DBEBay-Neue Anzeige erstellen')
-@section('content')<h1>Neue Anzeige erstellen</h1>
+@section('content')
+    <h1>Neue Anzeige erstellen</h1>
     <form action="{{ route('listings.store') }}" method="POST">
         <input type="hidden" name="customer_id" value="1">
         @csrf

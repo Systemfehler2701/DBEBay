@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 10px solid #1CB1B1;
+    padding: 0 100px;
+}
+
+.logo {
+    width: 170px;
+    height: auto;
+}
+
+.nav-img {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-img a {
+    width: 30px;
+}
+
+.nav-img a:hover {
+    transform: scale(1.20);
+}

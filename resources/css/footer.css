@@ -1,0 +1,41 @@
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 200px;
+    border-top: 10px solid #1CB1B1;
+    background-color: #E4F1F1;
+}
+
+.footer-content {
+    display: flex;
+    margin: 25px 100px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 170px;
+    height: auto;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+nav {
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media nav {
+    padding: 10px 0 30px 0;
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
