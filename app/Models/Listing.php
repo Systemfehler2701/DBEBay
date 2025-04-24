@@ -34,3 +34,12 @@ class Listing extends Model
         return $this->belongsToMany(Customer::class, 'favorites');
     }
 }
+
+/*use App\Models\Listing;
+
+$listing = Listing::create([
+    'name' => 'Obstplantage',
+    'description' => 'Super schön gelegen mit verschiednen obstpflanzen',
+    'price' => 1500.00,
+    'customer_id' => 1
+]);*/

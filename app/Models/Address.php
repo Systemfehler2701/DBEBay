@@ -19,3 +19,12 @@ class Address extends Model
         return $this->belongsTo(related: Customer::class);
     }
 }
+/*
+use App\Models\Address;
+$address = Address::create([
+    'street' => 'Obstweg',
+    'house_number' => '55',
+    'postal_code' => '25147',
+    'city' => 'Hannover',
+]);
+*/

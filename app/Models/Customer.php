@@ -85,4 +85,15 @@ class Customer extends Model
         return $this->belongsToMany(Listing::class, 'favorites');
     }
 }
-
+/*
+use App\Models\Customer;
+$customer = Customer::create([
+    'username' => 'Annanass',
+    'firstname' => 'Anna',
+    'lastname' => 'Obstkorb',
+    'email' => 'anna@nassobst.com',
+    'password' => bcrypt('gelbundstachlig'),
+    'mobile' => '032456789',
+    'address_id' => $address->id,
+]);
+*/
