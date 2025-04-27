@@ -33,6 +33,11 @@ class Listing extends Model
     {
         return $this->belongsToMany(Customer::class, 'favorites');
     }
+
+    public function getCoverImagePathAttribute(): string
+    {
+        return $this->images->where('position', 0)->first()?->image_path ?? 'placeholder.jpg';
+    }
 }
 
 /*use App\Models\Listing;

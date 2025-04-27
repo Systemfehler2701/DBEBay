@@ -43,7 +43,7 @@ class ListingController extends Controller
             'price' => $request->price
         ]);
         // Benutzer zur Übersichtsseite weiterleiten
-        return redirect('/listings');
+        return redirect('/listings')->with('success', 'Der Artikel wurde erfolgreich erstellt!');
     }
 
     /**
@@ -74,7 +74,7 @@ class ListingController extends Controller
         ]);
         $listing->update($request->only(['name', 'description', 'price']));
 
-        return redirect('/listings/' . $listing->id);
+        return redirect('/listings/' . $listing->id)->with('success', 'Der Artikel wurde erfolgreich bearbeitet!');
     }
 
     /**
