@@ -39,12 +39,3 @@ class Listing extends Model
         return $this->images->where('position', 0)->first()?->image_path ?? 'placeholder.jpg';
     }
 }
-
-/*use App\Models\Listing;
-
-$listing = Listing::create([
-    'name' => 'Obstplantage',
-    'description' => 'Super schön gelegen mit verschiednen obstpflanzen',
-    'price' => 1500.00,
-    'customer_id' => 1
-]);*/

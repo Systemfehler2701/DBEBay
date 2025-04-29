@@ -1,20 +1,21 @@
 <?php
 
-use App\Http\Controllers\FavoriteController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListingController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::resource('user', UserController::class);
-Route::resource('listings', ListingController::class);
 
-Route::post('/favorites/{listing}', [FavoriteController::class, 'store'])->name('favorites.store');
+// Startseite auf Listings setzen 
+Route::get('/', [ListingController::class, 'index'])->name('Startseite');
 
+Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');
 
-// Extra-Routen für Auth
-Route::get('/register', [UserController::class, 'register'])->name('user.register');
-Route::post('/register', [UserController::class, 'store'])->name('user.store');
-Route::post('/login', [UserController::class, 'authenticate'])->name('user.authenticate');
-Route::post('/logout', [UserController::class, 'logout'])->name('user.logout');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/listings/create', [ListingController::class, 'create'])->name('listings.create');
+    Route::post('/listings', [ListingController::class, 'store'])->name('listings.store');
+    Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
+    Route::put('/listings/{listing}', [ListingController::class, 'update'])->name('listings.update');
+    Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->name('listings.destroy');
+
+});
+
+require __DIR__ . '/auth.php';

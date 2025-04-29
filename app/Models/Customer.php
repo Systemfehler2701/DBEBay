@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Customer extends Model
+class Customer extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, SoftDeletes, Notifiable;
 
     /**
@@ -85,15 +85,3 @@ class Customer extends Model
         return $this->belongsToMany(Listing::class, 'favorites');
     }
 }
-/*
-use App\Models\Customer;
-$customer = Customer::create([
-    'username' => 'Annanass',
-    'firstname' => 'Anna',
-    'lastname' => 'Obstkorb',
-    'email' => 'anna@nassobst.com',
-    'password' => bcrypt('gelbundstachlig'),
-    'mobile' => '032456789',
-    'address_id' => $address->id,
-]);
-*/

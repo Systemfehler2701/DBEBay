@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Address extends Model
 {
@@ -14,17 +14,8 @@ class Address extends Model
         'city',
     ];
 
-    public function customer(): BelongsTo
+    public function customers(): HasMany
     {
-        return $this->belongsTo(related: Customer::class);
+        return $this->HasMany(Customer::class);
     }
 }
-/*
-use App\Models\Address;
-$address = Address::create([
-    'street' => 'Obstweg',
-    'house_number' => '55',
-    'postal_code' => '25147',
-    'city' => 'Hannover',
-]);
-*/

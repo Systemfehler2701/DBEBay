@@ -24,12 +24,3 @@ class Image extends Model
         'position' => 'integer',
     ];
 }
-/*
-use App\Models\Image;
-
-$image = Image::create([
-    'listing_id' => $listing->id,
-    'position' => 0,
-    'image_path' => 'uploads/iphone16.jpg'
-]);
-*/

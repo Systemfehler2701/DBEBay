@@ -1,0 +1,152 @@
+/* Datei: resources/css/register.css */
+
+.auth-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    width: 800px;
+    height: fit-content;
+    border: 2px solid #F82B1E;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    gap: 50px;
+}
+
+.auth-headline {
+    margin-top: 60px;
+}
+
+.auth-container h2 {
+    color: #F82B1E;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.auth-container span {
+    font-weight: bold;
+}
+
+.auth-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    gap: 15px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.auth-userinfo img {
+    width: 24px;
+}
+
+.auth-userinfo-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.auth-userinfo-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.auth-userinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.auth-input {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 6px 3px #0000001a;
+    overflow: hidden;
+    padding: 5px 10px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.auth-input input {
+    border: none;
+}
+
+.city {
+    margin: 0;
+}
+
+.auth-input input:focus {
+    outline: none;
+}
+
+.auth-input-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.auth-container label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.auth-button {
+    margin: 20px 0 60px 0;
+}
+
+.auth-button button {
+    text-align: center;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 50px;
+    background: #F82B1E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background .3s;
+    margin-top: 15px;
+}
+
+.auth-container button:hover {
+    background: #d62828;
+}
+
+
+/* Pfeile entfernen bei Number-Inputs */
+
+.auth-input input[type=number]::-webkit-inner-spin-button,
+.auth-input input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Auch Firefox die Pfeile wegnehmen */
+
+.auth-input input[type=number] {
+    appearance: textfield;
+}
